@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm đại học khối D</title>
+    <style>
+        #hienthi{
+            color: red;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+   <h1>Tính điểm ĐH khối D</h1>
+   <table>
+       <tr>
+           <td>Môn Toán</td>
+           <td><input type="text" id="Toan"></td>
+       </tr>
+       <tr>
+        <td>Môn Văn </td>
+        <td><input type="text" id="Van"></td>
+    </tr>
+    <tr>
+        <td>Môn Anh</td>
+        <td><input type="text" id="Anh"></td>
+    </tr>
+    <tr>
+        <td>Khu Vực</td>
+        <td><select id="khuvuc">
+            <option>KV1</option>
+            <option>KV2-NT</option>
+            <option>KV2</option>
+            <option>KV3</option>
+        </select></td>
+    </tr>
+    <tr>
+        <td><button onclick="Tinhdiem()">Tính điểm</button></td>
+        <td>&nbsp;</td>
+    </tr>
+   </table>
+   <!-- Môn Toán &nbsp; <input type="text" id="Toan"><br/>
+   Môn Văn &nbsp; <input type="text" id="Van"><br/>
+   Môn Anh &nbsp;<input type="text" id="Anh"><br/>
+   Khu Vực &nbsp; <select id="khuvuc">
+       <option>KV1</option>
+       <option>KV2-NT</option>
+       <option>KV2</option>
+       <option>KV3</option>
+   </select> <br/>
+   <br/>
+   <button onclick="Tinhdiem()">Tính điểm</button> -->
+   <p id="hienthi"></p>
+   <script src="JS/index.JS">
+   </script>
+</body>
+</html>

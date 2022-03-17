@@ -1,12 +1,9 @@
 
 
-    let sotiengoi = prompt("Hãy nhập số tiền gởi");
-    a = parseInt(sotiengoi);
-    let laisuat = prompt("Hãy nhập lãi suất %");
-    b = parseFloat(laisuat)/100;
-    let namgui = prompt("Hãy nhập số năm gửi");
-    n = parseInt(namgui);
-    let c = n*b*a ;
-    document.write("Số tiền lãi thu được sau " + n + " năm gửi là :" + c+'<br/>');
-    let d = a + c;
-    document.write("Tiền thu được sau " + n + " năm gửi là :" + d);
+    let amountOfMoney = parseInt(prompt("Hãy nhập số tiền gởi"));
+    let numberOfYear = parseInt(prompt("Hãy nhập số năm gởi"));
+    let anualRate = parseFloat(prompt("Hãy nhập lãi suất %"));
+    let totalMoneyRate = amountOfMoney*numberOfYear*anualRate/100
+    document.write("Số tiền lãi thu được sau " + numberOfYear + " năm gửi là :" + totalMoneyRate+'<br/>');
+    let totalMoney = amountOfMoney+totalMoneyRate;
+    document.write("Tiền thu được sau " + numberOfYear + " năm gửi là :" + totalMoney);

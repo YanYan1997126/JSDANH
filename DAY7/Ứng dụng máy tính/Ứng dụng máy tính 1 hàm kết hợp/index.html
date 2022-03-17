@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng máy tính kết hợp</title>
+</head>
+<body>
+    <form>
+        Nhập số thứ nhất <input type="text" id="n1">
+        Nhập số thứ hai <input type="text" id="n2">
+    </form>
+   <p id="a">
+    <button onclick="tinhtoan()">+</button>
+    <button onclick="tinhtoan()">-</button>
+    <button onclick="tinhtoan()">*</button>
+    <button onclick="tinhtoan()">/</button>
+   </p> 
+   <p id="kq"></p>
+   <script>
+       function tinhtoan(){
+        var a = document.getElementById('n1').value;
+var b = document.getElementById('n2').value;
+var c = document.getElementById('a').value;
+var f = 0;
+switch(c){
+    case "+":{
+f = parseInt(a) + parseInt(b);
+break;}
+case "-" :{
+f = parseInt(a) - parseInt(b);
+break;
+}
+case  "*":{
+f = parseInt(a) *parseInt(b);
+break;
+}
+default :{
+f = parseInt(a) /parseInt(b);
+}
+document.getElementById("kq").innerHTML = "Kết quả là: " + f;
+   </script>
+</body>
+</html>
