@@ -8,12 +8,25 @@
 </head>
 <body>
     <p>Nhập số</p>
-    <form action="">
-        <input type="text" id="a">
-        <button onclick="fc()">Kiểm tra</button>
-    </form>
-    <script src="JS/index.js">
-      
+   
+        <input type="number" id="input-number">
+        <button id="checkBtn">Kiểm tra</button>
+        <br/>
+  <div id="result"></div>
+    <script >
+      let inputNumber = document.getElementById('input-number');
+      let checkBtn = document.getElementById('checkBtn');
+      let result = document.getElementById('result');
+      checkBtn.addEventListener('click', function(){
+          let number = parseInt(inputNumber.value);
+          let isEven = number % 2 == 0? "Even": "Odd";
+          result.innerText = number+ " is "+ isEven;
+          console.log(isInt(number));
+      })
+      // Kiểm tra integer
+      function isInt(number){
+          return number%1 === 0
+      }
     </script>
 </body>
 </html>
