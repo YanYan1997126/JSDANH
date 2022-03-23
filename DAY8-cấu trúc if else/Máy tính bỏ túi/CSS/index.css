@@ -1,36 +1,51 @@
+*, *::before,*::after{
+    box-sizing: border-box;
+    font-family: Gottham Rounded, sans-serif;
+    font-weight: normal;
+}
 body{
-    font-family: Roboto;
-    background: #373B44;
-    background: -webkit-linear-gradient(to right, #4286f4, #373B44);
-    background: linear-gradient(to right, #4286f4, #373B44);
+    padding:0;
+    margin: 0;
+    background: linear-gradient(to right,#00AAFF,#00FF6C);
 }
-#may_tinh{
-    width:320px;
-    height:520px;
-    background-color: #eaedef;
-    top:20px;
-    margin:0 auto;
-    position:relative;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px, auto) repeat(5,100px);
 }
-#ket_qua{
-    height: 120px;
+.calculator-grid > button{
+    cursor: pointer ;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255,255,255, .75);
 }
-#ket_qua_cu{
-    text-align: right;
-    height:20px;
-    margin:0 20px;
-    padding-top:20px;
-    font-size:15px;
-    color:#919191;
+.calculator-grid > button:hover{
+    background-color: rgba(255,255,255, .9);
 }
-#xuat_ket_qua {
-    text-align: right;
-    height:60px;
-    margin: 10px 20px;
-    font-size: 30px;
+.span-two {
+    grid-column: span 2;
 }
-#ban_phim{
-    height: 400px;
+.output {
+    grid-column: 1/-1;
+    background-color: rgba(0,0,0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+
+}
+.output.previous-operand{
+    color: white;
+    font-size: 1.5rem;
+}
+.output.current-operand{
+    color: white;
+    font-size: 1.5rem;
 }
