@@ -1,8 +1,8 @@
 function Tinhdiem(){
-    let toan = parseInt(document.getElementById("Toan").value);
-    let van = parseInt(document.getElementById("Van").value);
-    let anh = parseInt(document.getElementById("Anh").value);
-    let sum = toan + van + anh
+    let toan = parseFloat(document.getElementById("Toan").value);
+    let van = parseFloat(document.getElementById("Van").value);
+    let anh = parseFloat(document.getElementById("Anh").value);
+    let sum = toan + van + anh;
     let khuvuc = document.getElementById("khuvuc").value;
     switch (khuvuc){
         case 'KV1':
