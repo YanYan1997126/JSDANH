@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Sample screen</h2>
+    <input type="text" id="inputNumber">
+    <button onclick="add()">add</button>
+    <button onclick="display()">display</button>
+    <div id="result"></div>
+</body>
+<script>
+    let displayNumber = [];
+    function add() {
+        let inputNumber = document.getElementById('inputNumber').value;
+        displayNumber.push(inputNumber);
+        console.log(displayNumber);
+    }
+    function display() {
+        let result = document.getElementById('result');
+        let str='';
+        for (let i=0; i < displayNumber.length; i++)  {
+           str += '<p>'+'element is '  + i + '= ' + displayNumber[i]+'</p>';
+        }
+        result.innerHTML = str;
+
+    }
+</script>
+
+</html>
