@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra tính đối xứng từ</title>
+</head>
+
+<body>
+    <script>
+        function reverseValue(n) {
+            n = n.toString()
+            return n.split("").reverse().join("");
+        }
+        function symmetricalValue(n) {
+            let flag = 0;
+            if (reverseValue(n) == n) flag = 1;
+            return flag;
+        }
+        let n = prompt(" Enter the value ");
+        let check = symmetricalValue(n);
+        if (check == 1) console.log(n + " la chuoi doi xung");
+        else console.log(n + " khong phai la chuoi doi xung");
+    </script>
+</body>
+
+</html>

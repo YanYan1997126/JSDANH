@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+
+<form>
+    <p>
+        <label>Foots to Meets</label>
+        <input id="inputFoots" type="number" placeholder="Foots"
+               oninput="FootsConverter(this.value)"
+               onchange="FootsConverter(this.value)">
+    </p>
+    <p>Meets: <span id="outputMeets"></span></p>
+    <p>
+        <label>Meets to Foots</label>
+        <input id="inputMeets" type="number" placeholder="Meets"
+               oninput="MeetsConverter(this.value)"
+               onchange="MeetsConverter(this.value)">
+    </p>
+    <p>Foots: <span id="outputFoots"></span></p>
+    
+</form>
+
+<script>
+
+    function FootsConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputMeets").innerHTML = valNum* 0.305;
+    }
+    function MeetsConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputFoots").innerHTML = valNum*3.279;
+    }
+</script>
+</body>
+</html>
